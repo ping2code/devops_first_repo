@@ -271,7 +271,7 @@ git push
 
 
 
-To pick a feature from one branch to other
+To pick a feature/file from one branch to other
 
 git cherry-pick <commit-hash>
 
@@ -281,6 +281,50 @@ feature-2.txt									feature-2.txt
 feature-4.txt				
              <<<<<-----<<<<<<---------|
                                       |------------------<<<<<<<----------------feature-3.txt
+
+First identify the commit hash of the file/feature from Branch2
+Cope the commit hash which you wan to add it Bracnh1
+
+Brach-2:
+
+$ git log --oneline
+c03bae2 (HEAD -> Branch2) feat: Added new feature-6
+2c52090 feat: Added new feature-5
+8563d31 feat: Added new feature-4
+
+Branch-1: getting feature 8563d31 (feature-4.txt) from Brach2
+
+Before:
+sirii@LUCKYTHEWINNER MINGW64 /f/MyRepos/devops_first_repo (Branch1)
+$ ls -l
+total 9
+-rw-r--r-- 1 sirii 197121 5382 May 23 18:55 README.md
+-rw-r--r-- 1 sirii 197121    0 May 23 19:13 feature-1.txt
+-rw-r--r-- 1 sirii 197121    0 May 23 19:13 feature-2.txt
+-rw-r--r-- 1 sirii 197121    0 May 23 19:13 feature-3.txt
+
+After:
+
+
+$ git cherry-pick 8563d31
+[Branch1 2216a75] feat: Added new feature-4
+ Date: Sat May 23 19:09:58 2026 -0500S
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature-4.txt
+
+sirii@LUCKYTHEWINNER MINGW64 /f/MyRepos/devops_first_repo (Branch1)
+$ ls -l
+total 9
+-rw-r--r-- 1 sirii 197121 5382 May 23 18:55 README.md
+-rw-r--r-- 1 sirii 197121    0 May 23 19:13 feature-1.txt
+-rw-r--r-- 1 sirii 197121    0 May 23 19:13 feature-2.txt
+-rw-r--r-- 1 sirii 197121    0 May 23 19:13 feature-3.txt
+-rw-r--r-- 1 sirii 197121    0 May 23 19:14 feature-4.txt
+
+
+
+
+
 
 
 
