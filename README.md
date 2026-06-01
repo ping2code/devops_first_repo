@@ -1,6 +1,33 @@
 
 
 NOTE:\*\*\* Make sure both VSCode and Git bash are working in same directory
+User Setup:
+
+$ git config --global user.name     (syntax:  git config --global user.name "Ganapathi Pentu" )
+Ganapathi Pentu
+
+$ git config --global user.email    (syntax:  git config --global user.email "ganapathi2819@gmail.com" )
+ganapathi2819@gmail.com
+
+$ git config --global --list
+core.editor=vim
+user.name=Ganapathi Pentu
+user.email=ganapathi2819@gmail.com
+
+GitHub repo clone/setup:
+
+Create a sample github repo in github for the first time use:
+
+I created devops_first_repo in github
+
+$ git clone https://github.com/ping2code/devops_first_repo.git
+$ $ pwd
+/f/MyRepos/devops_first_repo
+
+
+
+
+
 
 
 
@@ -283,7 +310,7 @@ feature-4.txt
                                       |------------------<<<<<<<----------------feature-3.txt
 
 First identify the commit hash of the file/feature from Branch2
-Cope the commit hash which you wan to add it Bracnh1
+Copy the commit hash which you wan to add it Bracnh1
 
 Brach-2:
 
@@ -322,16 +349,13 @@ total 9
 -rw-r--r-- 1 sirii 197121    0 May 23 19:14 feature-4.txt
 
 
-
-<<<<<<< HEAD
-=====================> **git rebase** <==================================
-
+=====================> **git rebase --i or interactive** 
+<==================================
 
 
 
 
-=======
->>>>>>> bc0a7d07ca00e9fec528dda35cc2be181892d85f
+
 
 
 
