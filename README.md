@@ -24,16 +24,9 @@ $ git clone https://github.com/ping2code/devops_first_repo.git
 $ $ pwd
 /f/MyRepos/devops_first_repo
 
-
-
-
-
-
-
+#"cheers"
 
 =====================> **git basic to push files to git** <========================
-
-
 
 git status
 
@@ -159,13 +152,13 @@ error: failed to push some refs to 'https://github.com/ping2code/devops\_first\_
 
 
 
-$git push -f
+$git push -f                    ## use force option ##
 
 
 
 =====================> **git reset ----soft** <==================================
 
-\--soft option will keep the file in staging area (which is equal to (git add is done), where --mixed with remove the file from staging area )
+\--soft option will keep the file in staging area (which is equal to (git add is done), where --mixed will remove the file from staging area )
 
 we just removing commit of the file using git reset --soft
 
@@ -349,8 +342,19 @@ total 9
 -rw-r--r-- 1 sirii 197121    0 May 23 19:14 feature-4.txt
 
 
-=====================> **git rebase --i or interactive** 
-<==================================
+=====================> **git rebase --i or interactive** <==================================
+
+Under rabase we gonna look at
+
+           Squash commit
+           Reword/Reorder commit
+           drop(Delete)  commit
+           Exce (run a custom command in between commits)
+
+
+           
+
+                        
 
 
 
